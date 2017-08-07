@@ -21,6 +21,7 @@ setup(
             '*.txt',
             '*.md',
             'static/ajax_select/css/*',
+            'static/ajax_select/css/images/*',
             'static/ajax_select/images/*',
             'static/ajax_select/js/*',
             'templates/ajax_select/*.html'
