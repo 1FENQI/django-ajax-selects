@@ -390,7 +390,7 @@ def _check_can_add(self, user, related_model):
     """
     Check if the User can create a related_model.
 
-    If the LookupChannel implements check_can_add() then use this.
+    If the LookupChannel implements can_add() then use this.
 
     Else uses Django's default permission system.
 
@@ -402,6 +402,7 @@ def _check_can_add(self, user, related_model):
     else:
         ctype = ContentType.objects.get_for_model(related_model)
         can_add = user.has_perm("%s.add_%s" % (ctype.app_label, ctype.model))
+
     if can_add:
         self.widget.add_link = reverse('add_popup', kwargs={
             'app_label': related_model._meta.app_label,
