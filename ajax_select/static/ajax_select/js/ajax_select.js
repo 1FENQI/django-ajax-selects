@@ -164,6 +164,10 @@
 
   $.extend(proto, {
     _initSource: function() {
+      if (this.options.extra_params) {
+        console.log('appending to options source:['+this.options.extra_params+']');
+        this.options.source = this.options.source + '?' + this.options.extra_params;
+      }
       if (this.options.html && $.isArray(this.options.source)) {
         this.source = function(request, response) {
           response(filter(this.options.source, request.term));

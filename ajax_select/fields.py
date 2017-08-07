@@ -29,10 +29,19 @@ def _media(self):
     js = ('ajax_select/js/bootstrap.js', 'ajax_select/js/ajax_select.js')
     try:
         if not settings.AJAX_SELECT_BOOTSTRAP:
-            js = ('ajax_select/js/ajax_select.js',)
+            if settings.DEBUG:
+                js = ('ajax_select/js/jquery-ui.js', 'ajax_select/js/ajax_select.js')
+            else:
+                # minified version
+                js = ('ajax_select/js/jquery-ui.min.js', 'ajax_select/js/ajax_select.js')
+
     except AttributeError:
         pass
-    return forms.Media(css={'all': ('ajax_select/css/ajax_select.css',)}, js=js)
+
+    if settings.DEBUG:
+        return forms.Media(css={'all': ('ajax_select/css/jquery-ui.css', 'ajax_select/css/ajax_select.css',)}, js=js)
+    else:
+        return forms.Media(css={'all': ('ajax_select/css/jquery-ui.min.css', 'ajax_select/css/ajax_select.css',)}, js=js)
 
 
 ###############################################################################
