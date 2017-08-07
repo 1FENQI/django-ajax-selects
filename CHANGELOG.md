@@ -1,5 +1,62 @@
 # Change Log
 
+## [1.6.0](https://github.com/crucialfelix/django-ajax-selects/tree/1.6.0) (2017-05-17)
+[Full Changelog](https://github.com/crucialfelix/django-ajax-selects/compare/1.5.2...1.6.0)
+
+Add support for Django 1.11
+Drop support for Django 1.6
+
+**Closed issues:**
+
+- LookupChannel.get\_objects fails for inherited models [\#153](https://github.com/crucialfelix/django-ajax-selects/issues/153)
+
+**Merged pull requests:**
+
+- Changed the build\_attrs to work with Django==1.11. [\#202](https://github.com/crucialfelix/django-ajax-selects/pull/202) ([xbello](https://github.com/xbello))
+
+## [1.5.2](https://github.com/crucialfelix/django-ajax-selects/tree/1.5.2) (2016-10-19)
+[Full Changelog](https://github.com/crucialfelix/django-ajax-selects/compare/1.5.1...1.5.2)
+
+**Fixed bugs:**
+
+- Occasionally: $.ui.autocomplete is undefined [\#188](https://github.com/crucialfelix/django-ajax-selects/issues/188)
+
+**Closed issues:**
+
+- No cache management headers in HTTP response [\#187](https://github.com/crucialfelix/django-ajax-selects/issues/187)
+
+## [1.5.1](https://github.com/crucialfelix/django-ajax-selects/tree/1.5.1) (2016-10-13)
+[Full Changelog](https://github.com/crucialfelix/django-ajax-selects/compare/1.5.0...1.5.1)
+
+**Implemented enhancements:**
+
+- Prefer document.createElement to document.write [\#182](https://github.com/crucialfelix/django-ajax-selects/issues/182)
+
+**Fixed bugs:**
+
+- fix: add related for multiple select [\#184](https://github.com/crucialfelix/django-ajax-selects/pull/184) ([crucialfelix](https://github.com/crucialfelix))
+
+## [1.5.0](https://github.com/crucialfelix/django-ajax-selects/tree/1.5.0) (2016-09-05)
+[Full Changelog](https://github.com/crucialfelix/django-ajax-selects/compare/1.4.3...1.5.0)
+
+- Added Support for Django 1.10
+- Dropped Django 1.5
+
+**Fixed bugs:**
+
+- Initial fields are duplicated when new row added. [\#94](https://github.com/crucialfelix/django-ajax-selects/issues/94)
+
+**Closed issues:**
+
+- ValueError in Django 1.10 [\#177](https://github.com/crucialfelix/django-ajax-selects/issues/177)
+- Django 1.10 did add popup [\#174](https://github.com/crucialfelix/django-ajax-selects/issues/174)
+- Example not Working [\#161](https://github.com/crucialfelix/django-ajax-selects/issues/161)
+
+**Merged pull requests:**
+
+- Fix documentation to format code properly [\#165](https://github.com/crucialfelix/django-ajax-selects/pull/165) ([joshblum](https://github.com/joshblum))
+- install.sh not working [\#162](https://github.com/crucialfelix/django-ajax-selects/pull/162) ([hdzierz](https://github.com/hdzierz))
+
 ## [1.4.3](https://github.com/crucialfelix/django-ajax-selects/tree/1.4.3) (2016-03-13)
 [Full Changelog](https://github.com/crucialfelix/django-ajax-selects/compare/1.4.2...1.4.3)
 
