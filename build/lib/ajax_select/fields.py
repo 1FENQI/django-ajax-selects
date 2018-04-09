@@ -4,7 +4,7 @@ from ajax_select.registry import registry
 from django import forms
 from django.conf import settings
 from django.contrib.contenttypes.models import ContentType
-from django.db.models.query import QuerySet
+from django.db.models import Model
 from django.forms.utils import flatatt
 from django.template.defaultfilters import force_escape
 from django.template.loader import render_to_string
@@ -203,10 +203,11 @@ class AutoCompleteSelectMultipleWidget(forms.widgets.SelectMultiple):
 
         lookup = registry.get(self.channel)
 
-        if isinstance(value, QuerySet):
-            objects = value
+        values = list(value)
+        if all([isinstance(v, Model) for v in values]):
+            objects = values
         else:
-            objects = lookup.get_objects(value)
+            objects = lookup.get_objects(values)
 
         current_ids = pack_ids([obj.pk for obj in objects])
 
