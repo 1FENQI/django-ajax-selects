@@ -1,21 +1,17 @@
 #!/usr/bin/env python
 
-try:
-    from setuptools import setup
-except ImportError:
-    from ez_setup import use_setuptools
-    use_setuptools()
-    from setuptools import setup
+from setuptools import setup
 
 setup(
     name='django-ajax-selects',
-    version='1.6.0',
+    version='1.7.1',
     description='Edit ForeignKey, ManyToManyField and CharField in Django Admin using jQuery UI AutoComplete.',
     author='Chris Sattinger',
     author_email='crucialfelix@gmail.com',
     url='https://github.com/crucialfelix/django-ajax-selects/',
     packages=['ajax_select'],
-    package_data={'ajax_select':
+    package_data={
+        'ajax_select':
         [
             '*.py',
             '*.txt',
@@ -55,7 +51,7 @@ Edit ForeignKey, ManyToManyField and CharField in Django Admin using jQuery UI A
 - Integrate with other UI elements elsewhere on the page using the javascript API
 - Works in Admin as well as in normal views
 
-- Django >=1.7, <=2
+- Django >=1.8, <=2.1
 - Python >=2.7, <=3.7
 """
 )
